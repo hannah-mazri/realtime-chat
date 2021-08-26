@@ -6,11 +6,9 @@ services:
       dockerfile: Dockerfile
       context: ./api
       target: development
-
     volumes:
       - ./api:/hnajwa/src/app
       - ./hnajwa/src/app/node_modules
-
     command: npm run start:dev
     depends_on:
       - postgres
